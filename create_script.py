@@ -185,9 +185,9 @@ def main():
 		# Finally, I don't recommend having more than 5 items here.
 		# That would be too long in DOS windows. I recommend building separate scripts instead.
 		#
-		("jp.co.hit_point.nekoatsume", "Nekoatsume", True),
-		#("jp.co.ponos.battlecats", "Battle Cats (JP)", True),
-		#("jp.co.ponos.battlecatstw", "Battle Cats (TW)", True),
+		("jp.co.hit_point.nekoatsume", "Nekoatsume", False),
+		#("jp.co.ponos.battlecats", "Battle Cats (JP)", False),
+		#("jp.co.ponos.battlecatstw", "Battle Cats (TW)", False),
 		#("more apps", "here if you want", False),
 	)
 	generate_batch(params)

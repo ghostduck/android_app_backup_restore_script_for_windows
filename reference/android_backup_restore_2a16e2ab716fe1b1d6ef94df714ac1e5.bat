@@ -92,10 +92,10 @@ REM INTENDED to use different file name for restoration - Just prevent you from 
 
 :op1
 @echo.
-set /p chk="Really want to backup Nekoatsume with APK? Will save in a file under \backup\ with today's name (y/n)"
+set /p chk="Really want to backup Nekoatsume? Will save in a file under \backup\ with today's name (y/n)"
 @echo.
 if /i %chk% ==y (
-adb backup jp.co.hit_point.nekoatsume -apk -f "backup\%datestr%_jp.co.hit_point.nekoatsume.ab"
+adb backup jp.co.hit_point.nekoatsume -f "backup\%datestr%_jp.co.hit_point.nekoatsume.ab"
 )
 
 @echo.
