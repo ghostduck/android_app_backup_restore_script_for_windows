@@ -9,7 +9,9 @@ Original idea from https://www.mobile01.com/topicdetail.php?f=566&t=3019116
 Please note that the save APK option may not work for some apps :(
 
 ## Batch file usage:
-After the first check, you will see the menu with items.
+Connect your device to PC. You probably need to enable USB debugging and PTP transfer.
+
+Then run the batch file. After the first check, you will see the menu with items.
 
 * Backup [app name]: Save backup file in /backup in file name of yyyymmdd_packagename.ab
 
