@@ -1,5 +1,5 @@
 # Android App Backup/Restore Script For Windows
-Simple Python script to generate batch file for Windows to backup/restore Android apps
+Simple Python3 script to generate batch file for Windows to backup/restore Android apps
 
 Original idea from https://www.mobile01.com/topicdetail.php?f=566&t=3019116
 
