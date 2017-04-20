@@ -145,31 +145,29 @@ exit""".format(n=len(p)*2+1)
 	return t
 
 def generate_batch(p):
-	# read file
-	f = open("batch_template.txt", "r")
-	
 	# use params to write the script
 	
-	# the hash will be the new batch file name, same p should generate same batch file
-	file_id = var_digest(p)
+	# Step 1: Setup params
+	# var_digest(p) generate the same hash value for same p, thus the same output batch name
+	output_file_path = "android_backup_restore_{n}.bat".format(n=var_digest(p))
+	template_file_path = "batch_template.txt"
 
 	d = dict(
 		batch_menu = build_menu(p),
 		batch_opts = build_opts(p),
 		batch_control = build_menu_flow(len(p))
 	)
-	# the batch file content
-	batch_content = Template(f.read()).substitute(d)
 	
-	# output file
-	out = open("android_backup_restore_{n}.bat".format(n=file_id), "w")
-	out.write(batch_content)
-	
-	# cleanup
-	f.close()
-	out.close()
-
-	print("Batch file created")
+	# Step 2: Read template file to generate batch content
+	# with statement will automatcially run close() for you
+	with open(template_file_path, "r") as f:
+		batch_content = Template(f.read()).substitute(d)
+		
+	# Step 3: Create the batch file
+	with open(output_file_path, "w") as out:
+		out.write(batch_content)
+		
+	print("Batch file {o} created successfully".format(o=output_file_path))
 
 def main():
 	# Setup the parameters here
